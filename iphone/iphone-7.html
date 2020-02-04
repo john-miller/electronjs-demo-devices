@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>iPhone SIM</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        html {
+            background: transparent;
+        }
+        body {
+            -webkit-app-region: drag;
+            background: url('./iphone-7.png');
+        }
+        .upper-draggable-region {
+            -webkit-user-select: none; 
+            -webkit-app-region: drag; 
+            width: 340px; 
+            height: 70px;
+            position: absolute;
+            top: 10px;
+            left: 30px;
+        }
+        .lower-draggable-region {
+            -webkit-user-select: none; 
+            -webkit-app-region: drag; 
+            width: 340px; 
+            height: 70px;
+            position: absolute;
+            bottom: 15px;
+            left: 30px;
+        }
+        .content-frame {
+            background-color: rgba(0, 0, 0, 0.3);
+            height: 532px;
+            width: 295px;
+            left: 53px;
+            top: 90px;
+            position: absolute;
+            border: 0px;
+        }
+    </style>
+  </head>
+  <body>
+        <div class="upper-draggable-region"></div>
+        <div class="lower-draggable-region"></div>
+        <iframe class="content-frame" frameborder="0" marginwidth="0" marginheight="0" src="http://localhost:4202/">
+        </iframe>
+  </body>
+</html>
